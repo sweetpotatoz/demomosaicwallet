@@ -12,15 +12,15 @@ import ExplorerHomeCtrl from './home/explorerHome.controller';
 explorerHomeModule.controller('ExplorerHomeCtrl', ExplorerHomeCtrl);
 
 // Create the module where our functionality can attach to
-let explorerApostillesModule = angular.module('app.explorerApostilles', []);
+// let explorerApostillesModule = angular.module('app.explorerApostilles', []);
 
 // Include our UI-Router config settings
-import ExplorerApostillesConfig from './apostilles/explorerApostilles.config';
-explorerApostillesModule.config(ExplorerApostillesConfig);
+// import ExplorerApostillesConfig from './apostilles/explorerApostilles.config';
+// explorerApostillesModule.config(ExplorerApostillesConfig);
 
 // Controllers
-import ExplorerApostillesCtrl from './apostilles/explorerApostilles.controller';
-explorerApostillesModule.controller('ExplorerApostillesCtrl', ExplorerApostillesCtrl);
+// import ExplorerApostillesCtrl from './apostilles/explorerApostilles.controller';
+// explorerApostillesModule.controller('ExplorerApostillesCtrl', ExplorerApostillesCtrl);
 
 // Create the module where our functionality can attach to
 let explorerNamespacesMosaicsModule = angular.module('app.explorerNamespacesMosaics', []);

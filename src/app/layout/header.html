@@ -16,7 +16,7 @@
       <ul class="nav navbar-nav" ng-show="$ctrl._DataBridge.accountData.meta && $ctrl._DataBridge.accountData.account">
         <li><a style="outline:0;" ui-sref-active="active" ui-sref="app.dashboard" show-authed="true"><i class="fa fa-dashboard"></i></a></li>
         <li><a style="outline:0;" ui-sref-active="active" ui-sref="app.transferTransaction" show-authed="true"><i class="fa fa-credit-card"></i></a></li>
-        <li><a style="outline:0;" ui-sref-active="active" ui-sref="app.portal" show-authed="true"><i class="fa fa-hashtag"></i></a></li>
+        <!--<li><a style="outline:0;" ui-sref-active="active" ui-sref="app.portal" show-authed="true"><i class="fa fa-hashtag"></i></a></li>-->
         <li><a style="outline:0;" ui-sref-active="active" ui-sref="app.explorerHome" show-authed="true"><i class="fa fa-globe"></i></a></li>
         <li><a style="outline:0;font-size:90%;cursor:pointer;" ng-show="!balanceToBtc && !balanceToUsd" show-account-data="balance" show-authed="true" ng-click="balanceToUsd = true;">
           <b>0.000000 XEM</b></a>
@@ -55,7 +55,7 @@
             <!--<li><select class="form-control" style="width:100%" ng-model="theme" ng-change="vm.setTheme(theme.color)" data-ng-options="theme.color for theme in vm.themes"><option value="" disabled selected>{{ 'SETTING_CHANG_THEME_SELECT' | translate }}</option></select></li>-->
           </ul>
         </li>
-        <li><a style="outline:0;border-left:medium none;" ui-sref-active="active" ui-sref="app.faq"><i class="fa fa-question-circle"></i></a></li>
+        <!--<li><a style="outline:0;border-left:medium none;" ui-sref-active="active" ui-sref="app.faq"><i class="fa fa-question-circle"></i></a></li>-->
         <li><a style="outline:0;cursor:pointer;text-transform: uppercase;border-right:none;" ng-click="$ctrl.purge()" ng-if="$ctrl._storage.wallets.length" show-authed="false"><i class="fa fa-trash"></i> <small><b>{{ 'HEADER_PURGE' | translate }}</b></small></a></li>
         <li ng-show="$ctrl._Wallet.currentAccount.label"><a style="outline:0;border-left:medium none; border-right: 1px solid rgb(68, 68, 68);">{{ $ctrl._Wallet.currentAccount.label }}</a></li>
         <li><a style="outline:0;cursor:pointer;border-right:none;" show-authed="true" ng-click="$ctrl.logout()"><i class="fa fa-sign-out"></i> <small><b>{{$ctrl.walletName}}</small></b></a></li>

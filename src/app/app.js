@@ -34,15 +34,15 @@ import './modules/signup';
 import './modules/login';
 import './modules/languages';
 import './modules/transferTransaction';
-import './modules/portal';
-import './modules/apostille';
+// import './modules/portal';
+// import './modules/apostille';
 import './modules/account';
 import './modules/multisignature';
 import './modules/namespaces';
 import './modules/mosaics';
 import './modules/explorer';
 import './modules/importanceTransfer';
-import './modules/changelly';
+// import './modules/changelly';
 import './modules/faq';
 
 // Create and bootstrap application
@@ -55,27 +55,27 @@ const requires = [
     'app.home',
     'app.dashboard',
     'app.transferTransaction',
-    'app.createMultisig',
-    'app.editMultisig',
+    // 'app.createMultisig',
+    // 'app.editMultisig',
     'app.namespaces',
-    'app.createMosaic',
-    'app.editMosaic',
-    'app.portal',
+    // 'app.createMosaic',
+    // 'app.editMosaic',
+    // 'app.portal',
     'app.explorerHome',
-    'app.explorerApostilles',
+    // 'app.explorerApostilles',
     'app.explorerNamespacesMosaics',
     'app.accountsExplorer',
     'app.signup',
     'app.login',
     'app.services',
-    'app.faq',
+    // 'app.faq',
     'app.account',
-    'app.createApostille',
-    'app.auditApostille',
-    'app.apostilleHistory',
-    'app.apostilleMessage',
-    'app.transferApostille',
-    'app.updateApostille',
+    // 'app.createApostille',
+    // 'app.auditApostille',
+    // 'app.apostilleHistory',
+    // 'app.apostilleMessage',
+    // 'app.transferApostille',
+    // 'app.updateApostille',
     'app.importanceTransfer',
     'app.multisigImportanceTransfer',
     'ngAnimate',
@@ -85,7 +85,7 @@ const requires = [
     'chart.js',
     'pascalprecht.translate',
     'app.lang',
-    'app.changelly'
+    // 'app.changelly'
 ];
 
 window.$ = window.jQuery = $;

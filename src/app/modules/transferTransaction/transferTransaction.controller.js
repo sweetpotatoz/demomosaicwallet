@@ -49,7 +49,7 @@ class TransferTransactionCtrl {
         this.counter = 1;
         this.formData.mosaics = null;
         this.mosaicsMetaData = this._DataBridge.mosaicDefinitionMetaDataPair;
-        this.formData.isMosaicTransfer = false;
+        this.formData.isMosaicTransfer = true;
         this.currentAccountMosaicNames = [];
         this.selectedMosaic = "nem:xem";
         // Mosaics data for current account
