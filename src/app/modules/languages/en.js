@@ -56,7 +56,7 @@ function EnglishProvider($translateProvider) {
         GENERAL_TAB_MULTISIG: 'Multisig',
         GENERAL_TOTAL: 'Total',
         GENERAL_REMOVE: 'Remove',
-        GENERAL_MOSAIC: 'Mosaic',
+        GENERAL_MOSAIC: 'Currency',
         GENERAL_FEE: 'Fee',
         GENERAL_LEVY: 'Levy',
         GENERAL_LEVY_TYPES: 'Levy types',
@@ -64,7 +64,7 @@ function EnglishProvider($translateProvider) {
         GENERAL_SEND: 'Send',
         GENERAL_TO: 'To',
         GENERAL_HASH: 'Hash',
-        GENERAL_NAME: 'Name',
+        GENERAL_NAME: 'Currency',
         GENERAL_INFORMATION: 'Information',
         GENERAL_ADDRESS: 'Address',
         GENERAL_PUBLIC_KEY: 'Public key',
@@ -119,14 +119,14 @@ function EnglishProvider($translateProvider) {
 
         // TRANSFER TRANSACTION MODULE
         TRANSFER_TRANSACTION_TITLE: 'Send & Receive',
-        TRANSFER_TRANSACTION_NAME: 'Transfer transaction',
+        TRANSFER_TRANSACTION_NAME: 'Transfer Currency',
         TRANSFER_TRANSACTION_MULTISIG_NAME: 'Multisignature transfer transaction',
         TRANSFER_TRANSACTION_INVOICE: 'Create invoice',
         TRANSFER_TRANSACTION_TAB_INVOICE: 'Invoice',
         TRANSFER_TRANSACTION_MOSAIC_TRANSFER: 'Mosaic transfer',
-        TRANSFER_TRANSACTION_ATTACH_MOSAIC: 'Attach mosaic',
+        TRANSFER_TRANSACTION_ATTACH_MOSAIC: 'Select Currency',
         TRANSFER_TRANSACTION_ATTACH: 'Attach',
-        TRANSFER_TRANSACTION_MOSAICS_ATTACHED: 'Mosaics attached',
+        TRANSFER_TRANSACTION_MOSAICS_ATTACHED: 'Currency selected',
         TRANSFER_TRANSACTION_ENCRYPT_MESSAGE: 'Encrypt message',
 
         // TRANSACTION LINES
@@ -318,7 +318,7 @@ function EnglishProvider($translateProvider) {
         // EXPLORER HOME MODULE
         EXPLORER_HOME_TITLE: 'Explorer - Home', 
         EXPLORER_HOME_NS: 'Your Namespaces',
-        EXPLORER_HOME_MOSAICS: 'Your Mosaics',
+        EXPLORER_HOME_MOSAICS: 'Your Currency',
         EXPLORER_HOME_NS_MULTISIG: 'Namespaces owned by multisig accounts',
         EXPLORER_HOME_MOSAICS_LEVY: 'Levy mosaic',
 
@@ -487,7 +487,7 @@ function EnglishProvider($translateProvider) {
         AGGREGATE_SELECT_WALLET_ACCOUNT: 'Use wallet account',
 
         // LOGIN MODULE
-        LOGIN_MEMBER_TITLE: 'Already a NEMber ?',
+        LOGIN_MEMBER_TITLE: 'Already has an account ?',
         LOGIN_UPGRADE_TITLE: 'Wallet needs an upgrade',
         LOGIN_UPGRADE_MESSAGE: 'Selected wallet needs an upgrade. This action will generate a child public key and add it into your main account. Download of updated wallet will be automatically triggered at success, you <b><u>must</u></b> download it !',
         LOGIN_UPGRADE_BUTTON: 'Upgrade wallet',

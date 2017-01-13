@@ -9,8 +9,12 @@ function AppBackground($state, $rootScope) {
                 function(event, toState, toParams, fromState, fromParams) {
                     if (toState.title == 'Home' || toState.title == 'Login' || toState.title == 'Signup') {
                         element.css({
-                            'background': 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/background.jpg")',
-                            'background-size': 'cover'
+                            //'background': 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/DF-background.png")',
+                            'background': 'url("images/DF-background.png")',
+                            'background-repeat': 'no-repeat',  
+                            'background-position': 'center',
+                            'background-size': '50% 50%'
+            
                         });
                     } else {
                         element.css({

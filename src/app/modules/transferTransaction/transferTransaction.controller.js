@@ -92,6 +92,9 @@ class TransferTransactionCtrl {
         this.updateInvoiceQR();
 
         this.updateFees();
+
+        //init mosaic transfer
+        this.setMosaicTransfer();
     }
 
     /**
@@ -311,6 +314,9 @@ class TransferTransactionCtrl {
             if (undefined !== this._DataBridge.mosaicOwned[acct]) {
                 this.currentAccountMosaicData = this._DataBridge.mosaicOwned[acct];
                 this.currentAccountMosaicNames = Object.keys(this._DataBridge.mosaicOwned[acct]).sort(); 
+                //this.currentAccountMosaicNames = Object.keys(this._DataBridge.mosaicOwned[acct]).forEach(function(namespacemosaic) {
+                //                   namespacemosaic.replace(/^(.*?):/,'');
+                //               });
             } else {
                 this.currentAccountMosaicNames = ["nem:xem"]; 
                 this.currentAccountMosaicData = "";
@@ -319,7 +325,8 @@ class TransferTransactionCtrl {
             this.selectedMosaic = "nem:xem";
     }
 
-    /**
+
+       /**
      * resetRecipientData() Reset data stored for recipient
      */
     resetRecipientData() {

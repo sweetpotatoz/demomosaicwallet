@@ -24,7 +24,8 @@ hr {
 
 thead {
 	color: white;
-	background-color: rgb(68, 68, 68);
+	/*background-color: rgb(68, 68, 68);*/
+	background-color: #256192;
 }
 
 th {
@@ -138,6 +139,7 @@ fieldset[disabled] .btn-default.focus {
 .panel-default > .panel-heading {
     color: white;
     background-color: #444;
+	/*background-color:#256192;*/
     border-radius: 0px;
 }
 
@@ -161,18 +163,24 @@ fieldset[disabled] .btn-default.focus {
 }
 
 .navbar-default .navbar-brand {
-	background-color: rgb(68, 68, 68);
-	color: white;
+	/*background-color: rgb(68, 68, 68);
+	color: white;*/
+	color: rgb(68, 68, 68);
+	background-color: white;
 }
 
 .navbar-default .navbar-brand:hover {
-	background-color: rgb(68, 68, 68);
-	color: white;
+	/*background-color: rgb(68, 68, 68);
+	color: white;*/
+	color: rgb(68, 68, 68);
+	background-color: white;
 }
 
 .navbar-default .navbar-brand:focus {
-	background-color: rgb(68, 68, 68);
-	color: white;
+	/*background-color: rgb(68, 68, 68);
+	color: white;*/
+	color: rgb(68, 68, 68);
+	background-color: white;
 }
 
 .navbar-default {
@@ -199,7 +207,8 @@ fieldset[disabled] .btn-default.focus {
 }
 
 .banner-left{
-	background-color: #444;
+	/*background-color: #444;*/
+	background-color: #256192;
 	color: white;
 	padding: 0px 15px 15px;
 }
@@ -463,7 +472,8 @@ border-bottom-color: transparent;
 
 .dashboard-page .panel-default > .panel-heading {
     color: #fff;
-    background-color: #444;
+    /*background-color: #444;*/
+	background-color: #256192;
     border-radius: 0px;
     border-bottom: 3px solid #dfa82f;
 }
@@ -485,7 +495,7 @@ border-bottom-color: transparent;
 
 .transferTransaction-page .panel-default .panel-heading {
     color: #444;
-    background-color: #fff;
+    background-color: #256192;
     border-radius: 0px;
     border-bottom: 3px solid #dfa82f;
 }
@@ -1033,3 +1043,4 @@ border-bottom-color: transparent;
 	color: white;
 	background-color: #444;
 }
+

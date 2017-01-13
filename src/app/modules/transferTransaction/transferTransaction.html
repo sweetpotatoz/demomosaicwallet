@@ -11,7 +11,7 @@
         <div class="col-md-6">
 
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: rgb(68, 68, 68); color: white;border-radius: 0px;">
+                <div class="panel-heading" style="color: white;border-radius: 0px;">
                   <i class="fa fa-chevron-right"></i> 
                     <!-- Title of panel -->
                     <span ng-show="!$ctrl.formData.isMultisig && !$ctrl.invoice">{{ 'TRANSFER_TRANSACTION_NAME' | translate }}</span>
@@ -76,46 +76,11 @@
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <input type="checkbox" ng-model="$ctrl.formData.isMosaicTransfer" ng-change="$ctrl.setMosaicTransfer();"> <b>{{'TRANSFER_TRANSACTION_MOSAIC_TRANSFER' | translate}}</b>
-                        </fieldset>
-
-                        <fieldset class="form-group">
-                            <div class="input-group">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button" style="cursor:default;opacity:1;" disabled>{{'GENERAL_AMOUNT' | translate}}</button>
-                                </span>
-                                <input class="form-control form-control-lg" type="number" ng-model="$ctrl.formData.amount" min="0" ng-disabled="$ctrl.formData.isMosaicTransfer" ng-change="$ctrl.updateFees();"/>
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button" style="cursor:default;opacity:1;" disabled><small>XEM</small></button>
-                                </span>
-                            </div>
-                        </fieldset>
-
-                        <fieldset class="form-group">
                             <textarea class="form-control" ng-model="$ctrl.formData.message" placeholder="{{'FORM_MESSAGE_PLACEHOLDER' | translate}}" rows="4" ng-change="$ctrl.updateFees();"></textarea>
                         </fieldset>
 
                         <fieldset class="form-group">
                             <input type="checkbox" ng-model="$ctrl.formData.encryptMessage" placeholder="" ng-disabled="$ctrl.formData.isMultisig || !$ctrl.formData.recipientPubKey.length" ng-change="$ctrl.updateFees();"> <b>{{'TRANSFER_TRANSACTION_ENCRYPT_MESSAGE' | translate}}</b>
-                        </fieldset>
-
-                        <fieldset class="form-group">
-                            <div class="input-group">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button" style="cursor:default;opacity:1;" disabled>{{'FORM_SIDE_BTN_TX_FEE' | translate}}</button>
-                                </span>
-                                <p style="display: table-cell; vertical-align: middle; border: 1px solid rgb(68, 68, 68);background-color:#fff;text-align:right;">
-                                    <span style="margin-right:10px;">
-                                        <!-- Multisig fee -->
-                                        <span ng-show="$ctrl.formData.isMultisig">{{($ctrl.formData.innerFee | fmtNemValue)[0]}}.{{($ctrl.formData.innerFee | fmtNemValue)[1]}} +</span>
-                                        <!-- Transaction fee -->
-                                        <span>{{($ctrl.formData.fee | fmtNemValue)[0]}}.{{($ctrl.formData.fee | fmtNemValue)[1]}} <span ng-show="$ctrl.formData.encryptMessage">(+ encryption fees)</span></span>
-                                    </span>
-                                </p>
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button" style="cursor:default;opacity:1;" disabled><small>XEM</small></button>
-                                </span>
-                            </div>
                         </fieldset>
 
                         <!-- Send button disabled if already pressed or no password or no clean recipient address or message is supposed to be encrypted but no recipient public key or is a mosaic transfer and no mosaics in array -->
@@ -157,13 +122,15 @@
         <div class="col-md-6 noPaddingLeft" ng-show="!$ctrl.invoice">
 
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: rgb(68, 68, 68); color: white;border-radius: 0px;">
+                <div class="panel-heading" style="color: white;border-radius: 0px;">
                   <i class="fa fa-paperclip"></i> {{ 'TRANSFER_TRANSACTION_ATTACH_MOSAIC' | translate }}
                 </div>
                 <div class="panel-body" style="padding-bottom:0;">
                     <div class="form-group">
                         <div class="input-group">
-                            <select class="col-sm-7 form-control" ng-options="mosaicName for mosaicName in $ctrl.currentAccountMosaicNames" ng-model="$ctrl.selectedMosaic" required="required" id="mosaic" ng-disabled="!$ctrl.formData.isMosaicTransfer"></select>
+                            <select class="col-sm-7 form-control" style="text-transform: uppercase" ng-options="mosaicName for mosaicName in $ctrl.currentAccountMosaicNames" ng-model="$ctrl.selectedMosaic" required="required" id="mosaic" ng-disabled="!$ctrl.formData.isMosaicTransfer"></select>
+ <!--<select class="col-sm-7 form-control" style="text-transform: uppercase" ng-options="mosaicName for mosaicName in $ctrl.currentAccountMosaicNames" ng-model="$ctrl.selectedMosaic" required="required" id="mosaic" ng-disabled="!$ctrl.formData.isMosaicTransfer"></select>-->
+
                             <span class="input-group-btn">
                                 <button type="button" class="btn btn-success" ng-click="$ctrl.attachMosaic()" ng-disabled="!$ctrl.formData.isMosaicTransfer">{{ 'TRANSFER_TRANSACTION_ATTACH' | translate }}</button>
                             </span>
@@ -176,7 +143,7 @@
                             </span>
                             <input class="form-control" style="text-align:right;" type="text" value="{{($ctrl.currentAccountMosaicData[$ctrl.selectedMosaic].quantity | fmtSupply:$ctrl.currentAccountMosaicData[$ctrl.selectedMosaic].mosaicId:$ctrl._DataBridge.mosaicDefinitionMetaDataPair)[0]}}.{{($ctrl.currentAccountMosaicData[$ctrl.selectedMosaic].quantity | fmtSupply:$ctrl.currentAccountMosaicData[$ctrl.selectedMosaic].mosaicId:$ctrl._DataBridge.mosaicDefinitionMetaDataPair)[1]}}" readOnly/>
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="button" style="cursor:default;opacity:1;text-transform:uppercase;" disabled><small>{{$ctrl.currentAccountMosaicData[$ctrl.selectedMosaic].mosaicId.namespaceId}}:{{$ctrl.currentAccountMosaicData[$ctrl.selectedMosaic].mosaicId.name}}</small></button>
+                                <button class="btn btn-default" type="button" style="cursor:default;opacity:1;text-transform:uppercase;" disabled><small>{{$ctrl.currentAccountMosaicData[$ctrl.selectedMosaic].mosaicId.name}}</small></button>                                
                             </span>
                         </div>
                     </div>
@@ -185,7 +152,7 @@
 
                 <!-- Mosaics attached table -->
                 <div class="panel panel-default" style="margin-top:10px;">
-                    <div class="panel-heading" style="background-color: rgb(68, 68, 68); color: white;border-radius: 0px;">
+                    <div class="panel-heading" style="color: white;border-radius: 0px;">
                         <i class="fa fa-table"></i> {{ 'TRANSFER_TRANSACTION_MOSAICS_ATTACHED' | translate }}
                     </div>
                     <table class="table table-bordered table-hover table-striped table-condensed" style="table-layout:fixed">
@@ -202,7 +169,7 @@
                     <table class="table table-bordered table-hover table-striped table-condensed" style="table-layout:fixed">
                         <tbody>
                             <tr ng-repeat="mos in $ctrl.formData.mosaics">
-                                <td style="overflow:hidden;text-overflow: ellipsis;" title="{{mos.mosaicId.namespaceId}}:{{mos.mosaicId.name}}"><span class="text-muted">{{mos.mosaicId.namespaceId}}</span>:{{mos.mosaicId.name}}</span>
+                                <td style="overflow:hidden; text-overflow: ellipsis; text-transform:uppercase;" title="{{mos.mosaicId.name}}">{{mos.mosaicId.name}}</span>
                                 </td>
                                 <td style="padding:0;"><input id="{{mos.gid}}" type="number" class="form-control" ng-model="mos.quantity" placeholder="1" min="0" ng-change="$ctrl.updateFees()"></td>
                                 <td><strong>{{(mos.quantity | fmtSupply:mos.mosaicId:$ctrl.mosaicsMetaData)[0]}}</strong>
